@@ -188,10 +188,7 @@
         
 
         <div class="article-content markdown-body">
-            <hr>
-<p>title: 搭建个人博客<br>date: 2022-06-04 19:55:57<br>tags:</p>
-<hr>
-<h2 id="搭建个人博客"><a href="#搭建个人博客" class="headerlink" title="搭建个人博客"></a>搭建个人博客</h2><p>虽然在学习中经常会记录一些东西，但都是使用现成的软件记录，少了一点“创作感”，所以打算自己搭建一个 <strong>个人博客</strong> 来记录学习到的知识点、遇到的问题以及探索到的新奇东西。<br>由于自己是新手，并且了解到hexo的社区更庞大，遇到问题解决方案更多，所以我的个人博客使用 <strong>hexo</strong> 搭建，下面是我搭建博客的过程：</p>
+            <p>虽然在学习中经常会记录一些东西，但都是使用现成的软件记录，少了一点“创作感”，所以打算自己搭建一个 <strong>个人博客</strong> 来记录学习到的知识点、遇到的问题以及探索到的新奇东西。<br>由于自己是新手，并且了解到hexo的社区更庞大，遇到问题解决方案更多，所以我的个人博客使用 <strong>hexo</strong> 搭建，下面是我搭建博客的过程：</p>
 <hr>
 <h3 id="一、部署环境"><a href="#一、部署环境" class="headerlink" title="一、部署环境"></a>一、部署环境</h3><h4 id="1、安装前提"><a href="#1、安装前提" class="headerlink" title="1、安装前提"></a>1、安装前提</h4><p>在部署hexo的环境之前，需要将 <a class="link"   target="_blank" rel="noopener" href="https://nodejs.org/en/download/" >Node.js<i class="fas fa-external-link-alt"></i></a>(版本不低于10.13) 和 <a class="link"   target="_blank" rel="noopener" href="http://git-scm.com/downloads" >Git<i class="fas fa-external-link-alt"></i></a> 安装好。安装好了之后可以使用：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v   # 查看node版本</span><br><span class="line">npm -v    # 查看npm版本</span><br></pre></td></tr></table></figure>
@@ -349,7 +346,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="nav-text">搭建个人博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83"><span class="nav-text">一、部署环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E5%89%8D%E6%8F%90"><span class="nav-text">1、安装前提</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85hexo"><span class="nav-text">2、安装hexo</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="nav-text">二、初始化个人博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-text">三、写博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E9%83%A8%E7%BD%B2%E5%88%B0%E8%BF%9C%E7%AB%AF"><span class="nav-text">四、部署到远端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="nav-text">五、配置主题</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E9%83%A8%E7%BD%B2%E7%8E%AF%E5%A2%83"><span class="nav-text">一、部署环境</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85%E5%89%8D%E6%8F%90"><span class="nav-text">1、安装前提</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%E3%80%81%E5%AE%89%E8%A3%85hexo"><span class="nav-text">2、安装hexo</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%88%9D%E5%A7%8B%E5%8C%96%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><span class="nav-text">二、初始化个人博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E5%86%99%E5%8D%9A%E5%AE%A2"><span class="nav-text">三、写博客</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E9%83%A8%E7%BD%B2%E5%88%B0%E8%BF%9C%E7%AB%AF"><span class="nav-text">四、部署到远端</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98"><span class="nav-text">五、配置主题</span></a></li></ol>
     </div>
 </div>
         </aside>
