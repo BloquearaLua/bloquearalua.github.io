@@ -205,8 +205,11 @@
                      lazyload
                      src="/images/loading.svg"
                      data-src="/./%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/githubrepo.png"
-                      alt="Alt text"
-                ><br>然后到博客文件夹下的 <strong>_config.yml</strong> 进行文件配置：</p>
+                     
+                ></p>
+<p>接着，需要安装一个 <strong>hexo-deployer-git库</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure>
+<p>然后到博客文件夹下的 <strong>_config.yml</strong> 的deploy进行文件配置：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: xxx[your github repository]</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>repository为GitHub仓库的远程地址，分支默认为主分支。<br>在更改完相关配置之后，通过 <strong>hexo generate</strong> 生成静态文件，最后通过 <strong>hexo deploy</strong> 部署到远程：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate # 生成静态文件</span><br><span class="line">hexo deploye  # 部署到远端</span><br></pre></td></tr></table></figure>
