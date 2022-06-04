@@ -215,7 +215,17 @@
             <p>在使用 git 的时候会出现各种错误，这篇是对错误的总结。</p>
 <h4 id="错误1"><a href="#错误1" class="headerlink" title="错误1"></a>错误1</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal:Authentication failed</span><br></pre></td></tr></table></figure>
 <p>原因：密码错误</p>
-<h4 id="错误2"><a href="#错误2" class="headerlink" title="错误2"></a>错误2</h4>
+<h4 id="错误2"><a href="#错误2" class="headerlink" title="错误2"></a>错误2</h4><p>在将代码推给远程分支的时候，出现了以下错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access &#x27;https://github.com/BloquearaLua/xxx.git/&#x27;: Failed to connect to github.com port 443 after 150226 ms: Connection refused</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="错误3"><a href="#错误3" class="headerlink" title="错误3"></a>错误3</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access &#x27;https://github.com/BloquearaLua/xxx.git/&#x27;: OpenSSL SSL_read: Connection was reset, errno 10054</span><br><span class="line"></span><br><span class="line"># 解决办法：</span><br><span class="line">git config --global http.sslVerify &quot;false&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="错误4"><a href="#错误4" class="headerlink" title="错误4"></a>错误4</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fatal: unable to access &#x27;https://github.com/BloquearaLua/xxx.git/&#x27;: Failed to connect to github.com port 443 after 21103 ms: Timed out</span><br><span class="line"></span><br><span class="line"># 解决办法：</span><br><span class="line">git config --global --unset http.proxy</span><br><span class="line">git config --global --unset https.proxy</span><br></pre></td></tr></table></figure>
+
+<h3 id="错误5"><a href="#错误5" class="headerlink" title="错误5"></a>错误5</h3><p>在将代码推送给远程分支的时候，遇到以下错误：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fatal: the remote end hung up unexpectedly</span><br></pre></td></tr></table></figure>
+<p>这个错误是指推送的项目体积太大了，需要修改一下buffer的大小，它的单位是b，524288000B相当于500M左右：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --local http.postBuffer 524288000</span><br></pre></td></tr></table></figure>
         </div>
 
         
@@ -383,7 +393,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%99%E8%AF%AF1"><span class="nav-text">错误1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%99%E8%AF%AF2"><span class="nav-text">错误2</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%99%E8%AF%AF1"><span class="nav-text">错误1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%94%99%E8%AF%AF2"><span class="nav-text">错误2</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF3"><span class="nav-text">错误3</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF4"><span class="nav-text">错误4</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%94%99%E8%AF%AF5"><span class="nav-text">错误5</span></a>
     </div>
 </div>
         </aside>
