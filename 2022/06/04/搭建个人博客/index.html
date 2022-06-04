@@ -164,6 +164,17 @@
     </span>
     
     
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/hexo%EF%BC%8C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">hexo，个人博客</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
 
     
     
@@ -191,7 +202,7 @@
 <h3 id="二、初始化个人博客"><a href="#二、初始化个人博客" class="headerlink" title="二、初始化个人博客"></a>二、初始化个人博客</h3><p>接着，创建一个文件夹来放置博客文件以及相关配置文件。进入这个文件夹，初始化博客，开启本地服务器之后，可以访问到本地博客。其相关命令如下（以下命令都可以使用简写，即输入首字母即可，如：server输入s即可）：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo init		# 初始化博客</span><br><span class="line">hexo server 	# 在本地启动博客（访问地址：http://localhost:4000/）</span><br></pre></td></tr></table></figure>
 
-<h3 id="三、写博客"><a href="#三、写博客" class="headerlink" title="三、写博客"></a>三、写博客</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;your blog name&quot;  # 新增博客</span><br><span class="line">hexo generate 			   # 生成</span><br></pre></td></tr></table></figure>
+<h3 id="三、写博客"><a href="#三、写博客" class="headerlink" title="三、写博客"></a>三、写博客</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo new &quot;your blog name&quot;  # 新增博客</span><br><span class="line">hexo generate  # 生成</span><br></pre></td></tr></table></figure>
 <p>我们可以通过 <strong>new</strong> 命令新增博客，新增的博客会被放在本地博客目录下的 <strong>&#x2F;source&#x2F;_posts</strong> 中。<br>在对新增文件进行编辑之后，使用 <strong>generate</strong> 进行生成静态文件。</p>
 <h3 id="四、部署到远端"><a href="#四、部署到远端" class="headerlink" title="四、部署到远端"></a>四、部署到远端</h3><p>在这里，远端部署选择了免费的github，首先需要到github创建一个仓库，仓库名需要以 <strong>.github.io</strong> 结尾，同时，还需要把仓库设置为 <strong>public</strong> ，如：<br><img  
                      lazyload
@@ -201,7 +212,7 @@
                 ><br>然后到博客文件夹下的 <strong>_config.yml</strong> 进行文件配置：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/one-command-deployment</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: xxx[your github repository]</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
 <p>repository为GitHub仓库的远程地址，分支默认为主分支。<br>在更改完相关配置之后，通过 <strong>hexo generate</strong> 生成静态文件，最后通过 <strong>hexo deploy</strong> 部署到远程：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate</span><br><span class="line">hexo deploye</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo generate # 生成静态文件</span><br><span class="line">hexo deploye  # 部署到远端</span><br></pre></td></tr></table></figure>
 <p>部署成功之后，可以直接使用仓库名访问。</p>
 <h3 id="五、配置主题"><a href="#五、配置主题" class="headerlink" title="五、配置主题"></a>五、配置主题</h3><p>在 <a class="link"   target="_blank" rel="noopener" href="https://hexo.io/themes/" >hexo官网<i class="fas fa-external-link-alt"></i></a> 中找到喜欢的主题，进入相关的github页面，按照其要求克隆到本地或者使用npm下载。下载下来的主题文件是预先配置好的，如果需要更改，需要到主题文件夹下的 <strong>_config.yml</strong> 进行相关修改。</p>
 <hr>
@@ -227,6 +238,14 @@
             </div>
         
 
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/hexo%EF%BC%8C%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">#hexo，个人博客</a>&nbsp;
+                    </li>
+                
+            </ul>
         
 
         
